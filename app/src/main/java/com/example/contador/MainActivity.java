@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //VARIABLES
     TextView resultado;
-    Button suma, resta;
+    Button suma, resta, dividir;
     String nom;
     int num = 0;
 
@@ -23,9 +23,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultado = findViewById(R.id.txtresul);
         suma = findViewById(R.id.btnsumar);
         resta = findViewById(R.id.btnrestar);
+        dividir = findViewById(R.id.btndividir);
 
         suma.setOnClickListener(this);
         resta.setOnClickListener(this);
+        dividir.setOnClickListener(this);
 
     }
 
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnrestar:
                 num--;
                 resultado.setText(num + "");
+                break;
+            case R.id.btndividir:
+                
                 break;
         }
     }
